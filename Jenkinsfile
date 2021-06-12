@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ls'
+                sh 'rsync . webdev:/var/www/html/adhithia'
             }
         }
         stage('Test') {
