@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls'
-                sh 'rsync . webdev:/var/www/html/adhithia/'
+                sh 'scp -r . webdev:/var/www/html/adhithia/'
                 sh 'ssh webdev ls /var/www/html/adhithia/'
             }
         }
