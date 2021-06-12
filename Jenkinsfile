@@ -2,21 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Pertama') {
             steps {
                 echo 'Building..'
-                sh 'rsync . webdev:/var/www/html/adhithia'
+                sh 'ls'
+                sh 'rsync . webdev:/var/www/html/adhithia/'
+                sh 'ssh webdev ls /var/www/html/adhithia/'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+        
     }
 }
