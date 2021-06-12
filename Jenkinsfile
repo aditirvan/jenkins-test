@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'ssh webdev df -h'
+                sh 'ls'
             }
         }
         stage('Test') {
