@@ -6,8 +6,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls'
-                sh 'scp -r . webdev:/var/www/html/adhithia/'
-                sh 'ssh webdev ls /var/www/html/adhithia/'
+                sh 'scp -i test-adhithia.pem . root@18.223.186.17:/var/www/html/adhithia/'
             }
         }
         
