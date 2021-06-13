@@ -9,6 +9,7 @@ pipeline {
                 sh 'pwd'    
                 sh 'rsync -r . webdev:/var/www/html/adhithia/'
                 sh 'ssh webdev ls /var/www/html/adhithia/'
+                sh 'ssh webdev ls /home'
             }
         }
         
