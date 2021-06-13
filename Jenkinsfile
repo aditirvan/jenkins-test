@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'ls'
                 sh 'pwd'    
-                sh 'cat /etc/hosts'
+                sh 'ssh webdev ls /var/www/html'
             }
         }
         
