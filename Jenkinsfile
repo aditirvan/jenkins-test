@@ -6,7 +6,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls'
-                sh 'pwd'
+                sh 'pwd'    
+                sh 'cat ../../../../etc/hosts'
             }
         }
         
