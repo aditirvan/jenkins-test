@@ -7,7 +7,8 @@ pipeline {
                 echo 'Building..'
                 sh 'ls'
                 sh 'pwd'    
-                sh 'ssh webdev ls /var/www/html'
+                sh 'rsync -r . webdev:/var/www/html/adhithia/'
+                sh 'ssh webdev ls /var/www/html/adhithia/'
             }
         }
         
