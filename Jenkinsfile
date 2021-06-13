@@ -6,11 +6,11 @@ pipeline {
             steps {
                 echo 'Building..'
                 sh 'ls'
-                sh 'pwd'    
-                sh 'ssh webdev ls /var/www/html/adhithia/'
+                sh 'pwd'
+                sh 'ssh webdev mkdir -p /home/valbury/adhithia'
                 sh 'ssh webdev ls /home/valbury/'
-                sh 'rsync -r . webdev:/var/www/html/adhithia/'
-
+                sh 'rsync -r . webdev:/home/valbury/adhithia/'
+                sh 'ssh webdev ls /home/valbury/adhithia/'
             }
         }
         
