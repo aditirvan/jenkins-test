@@ -12,7 +12,7 @@ pipeline {
         stage('Copying') {
             steps {
                 echo 'Copying files to web-server'
-                sh 'rsync -r . root@web-server:/var/www/html'
+                sh 'rsync -r . ec2-user@web-server:/var/www/html'
             }
         }
         stage('Done') {
