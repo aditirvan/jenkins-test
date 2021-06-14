@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'ls'
                 sh 'pwd'
-                sh 'ssh root@web-server ls /var/www/html'
+                sh 'ssh root@web-server'
             }
         }
         
