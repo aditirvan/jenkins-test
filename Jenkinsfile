@@ -18,6 +18,7 @@ pipeline {
         stage('Done') {
             steps {
                 echo 'Completed'
+                echo 'Send notification to developer'
             }
         }
     }
