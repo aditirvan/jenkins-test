@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 sh 'ls'
                 sh 'pwd'
-                sh 'ssh root@web-server'
+                sh 'rsync -r . root@web-server:/var/www/html'
             }
         }
         
